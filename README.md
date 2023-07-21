@@ -1,27 +1,7 @@
-# PopulationSimCopilot
+# Population Simulator
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.5.
+This is a simple population simulation written in Angular.  The underlying curiosity that triggered this was wondering just how quickly humans can reproduce. Questions like: "How quickly could the earth repopulate after a doomsday event?" Or "How many offspring could one family have after a couple hundred years?"  This was my attempt at getting a rough answer (even if it is based on an ideal world), and the answer is *Suprisingly Quickly*.
 
-## Development server
+The trick was to find a way to do it that would be performant in a web browser.  Tracking any kind of data on an individual level becomes very computationally intensive at large populations.  So I had to genericize the data, and make some simplifications.  The biggest one being that (based on the settings) all women would have the same number of children, at the same rate, at the same years of their lives.  For example if the birth rate is set to 3 years, number of children: 3, age of first child 24, then all women will have children at the age of 24, 27 and 30.  Everyone will also die at the same age.  This isn't terrible from a simulation perspective, because when you consider the numbers to be an average, you should get roughly the same results as you would with variance in a large enough simulation.  It does inflate numbers at certain points in the simulation. The other big restriction currently is most of the inputs are limited to round numbers (you can't say each couple will have 2.5 kids) which limits the flexibility of the inputs.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+I wanted to expore the capabilities of ChatGPT and Copilot for code generation and I thought this project (that I originally wrote about 7 years earlier) would be a good candidate.

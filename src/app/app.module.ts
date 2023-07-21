@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatListModule } from '@angular/material/list';
@@ -24,6 +25,7 @@ import { SimulationSettingsComponent } from './components/simulation-settings/si
     SimulationSettingsComponent,
   ],
   imports: [
+    FlexLayoutModule,
     BrowserModule,
     CommonModule,
     AppRoutingModule,

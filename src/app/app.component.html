@@ -1,13 +1,30 @@
-<mat-toolbar color="primary">
-  <span>Population Growth Simulator</span>
-</mat-toolbar>
+<div fxLayout="column">
+  <div class="header-image-container">
+    <h1 fxHide.lt-md>Population Simulator</h1>
 
-
-<div class="container">
-  <div class="settings-pane">
-    <app-simulation-settings></app-simulation-settings>
+    <button mat-raised-button
+      fxHide.lt-md
+      color="primary" 
+      (click)="headerBtnClick()">
+      Begin a Simulation
+    </button>
+    <p class="img-by-line">Image created by Midjourney</p>
   </div>
-  <div class="chart-pane">
-    <app-population-chart></app-population-chart>
+  <div class="content-container" fxLayout="column">
+    <div class="welcome-container">
+      <h1 fxHide.gt-sm>Population Simulator</h1>
+      <p>
+        Welcome to the Population Simulator!  This tool will allow you to simulate the growth of a population over time.
+        You can adjust the settings to see how different factors affect the population growth.
+      </p>
+    </div>
+    <div class="population-simulator-container" fxLayout="row" fxLayout.lt-md="column">
+      <div class="settings-pane" fxFlex.gt-sm="30">
+        <app-simulation-settings></app-simulation-settings>
+      </div>
+      <div class="chart-pane" fxFlex.gt-sm="70">
+        <app-population-chart></app-population-chart>
+      </div>
+    </div>
   </div>
 </div>

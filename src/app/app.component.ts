@@ -6,6 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-
   constructor() {}
+
+  headerBtnClick() {
+    // scroll the .content-container into view
+    const contentContainer = document.querySelector('.welcome-container');
+    if (contentContainer) {
+      contentContainer.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
 }

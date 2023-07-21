@@ -1,4 +1,42 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+$foreground: #495635;
+$background: #ebddb2;
+// $background: #f5e1b9;
+
+body {
+  margin: 0;
+  font-family: Montserrat, "Helvetica Neue", sans-serif;
+  background-color: $background;
+  color: $foreground;
+}
+
+.welcome-container {
+  background-color: $foreground;
+  color: $background;
+  color: #e2b553;
+}
+
+.mat-mdc-raised-button {
+  background-color: $foreground !important;
+  color: $background !important;
+}
+
+mat-form-field, .mdc-text-field {
+  background-color: transparent !important; /* Set the background to transparent */
+  border: none; /* Remove any borders */
+}
+
+/* Optional: Style the text color and other properties to your liking */
+.mat-form-field label,
+.mat-form-field input,
+.mat-form-field textarea {
+  color: #fff; /* Set the text color to white or any other color you prefer */
+  /* Add any other styles you want for the input and label */
+}

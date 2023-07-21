@@ -1,13 +1,57 @@
-.container {
-  display: flex;
-  flex-direction: row;
-  height: 100%;
+.header-image-container {
+  background-image: url('../assets/settlement.png');
+  background-size: cover;
+  width: 100%;
+  height: 50vw;
+  position: relative;
+
+  h1 {
+    position: absolute;
+    top: 3vw;
+    left: 20vw;
+    margin: 0;
+    // width: 100%;
+    // margin-top: 3vw;
+    // margin-left: 20vw;
+    // text-align: center;
+    font-family: 'Lugrasimo', cursive;
+    font-size: 3em;
+    color: #e2b553;
+  }
+  
+  button {
+    position: absolute;
+    top: 30vw;
+    left: 20vw;
+    // margin-top: 22vw;
+    // margin-left: 20vw;
+  }
+
+  .img-by-line {
+    color: #e2b553;
+    position: absolute;
+    bottom: 1vw;
+    right: 1vw;
+  }
 }
 
-.settings-pane {
-  width: 350px;
+.welcome-container {
+  width: 100%;
+
+  h1 {
+    width: 100%;
+    text-align: center;
+    font-size: 3em;
+    font-family: 'Lugrasimo', cursive;
+  }
+
+  p {
+    padding: 0 50px;
+    font-size: 1.5em;
+    font-family: 'Montserrat', sans-serif;
+  }
 }
 
-.chart-pane {
-  flex: 1 1 auto;
+.content-container {
+  min-height: 100vh;
 }

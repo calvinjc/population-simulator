@@ -13,10 +13,10 @@ export class PopulationSimulatorService {
 
   simulationSettings: SimulationSettings = {
     startingYear: new Date().getFullYear(),
-    startingPopulation: 200,
-    startingPopulationAgeRangeInput: "1-65",
-    startingPopulationAgeRange: [1, 65],
-    ageOfFirstChildbirth: 24,
+    startingPopulation: 500,
+    startingPopulationAgeRangeInput: "1-80",
+    startingPopulationAgeRange: [1, 80],
+    ageOfFirstChildbirth: 22,
     timeBetweenBirths: 3,
     numberOfChildren: 3,
     averageLifespan: 80,
@@ -29,6 +29,8 @@ export class PopulationSimulatorService {
   currentPopulation = this.simulationSettings.startingPopulation;
   currentBirths = 0;
   currentDeaths = 0;
+
+  maxY1Axis = 0;
 
   birthingAges: number[] = [];
   simulationYearsToUpdateTheChart: number[] = [];
@@ -44,6 +46,7 @@ export class PopulationSimulatorService {
     chart.data.datasets[0].data = [];
     chart.data.datasets[1].data = [];
     chart.data.datasets[2].data = [];
+    this.maxY1Axis = 0;
     chart.update();
 
     const ageRangeSplit = this.simulationSettings.startingPopulationAgeRangeInput.split('-');
@@ -299,7 +302,11 @@ export class PopulationSimulatorService {
       chart.data.datasets[0].data.push(this.currentPopulation);
       chart.data.datasets[1].data.push(this.currentBirths);
       chart.data.datasets[2].data.push(this.currentDeaths);
-      chart.options.scales!['y1']!.max = Math.max(this.currentBirths, this.currentDeaths) * 3;
+      const currentY1Scale = Math.max(this.currentBirths, this.currentDeaths) * 3
+      if (currentY1Scale > this.maxY1Axis) {
+        this.maxY1Axis = currentY1Scale;
+      }
+      chart.options.scales!['y1']!.max = this.maxY1Axis;
       chart.update();
     }
   }
