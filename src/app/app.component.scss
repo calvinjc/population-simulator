@@ -1,0 +1,13 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+
+.settings-pane {
+  width: 350px;
+}
+
+.chart-pane {
+  flex: 1 1 auto;
+}

@@ -1,0 +1,45 @@
+<div class="simulation-settings-form">
+  <h2>Simulation Settings</h2>
+  <form>
+    <mat-form-field>
+      <mat-label>Starting Year</mat-label>
+      <input matInput type="number" [(ngModel)]="simulationSettings.startingYear" name="startingYear">
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Starting Population</mat-label>
+      <input matInput type="number" [(ngModel)]="simulationSettings.startingPopulation" name="startingPopulation">
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Starting Population Age Range (ex: 18-25)</mat-label>
+      <input matInput [(ngModel)]="simulationSettings.startingPopulationAgeRangeInput" name="startingPopulationAgeRangeInput">
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Age of First Childbirth</mat-label>
+      <input matInput type="number" [(ngModel)]="simulationSettings.ageOfFirstChildbirth" name="ageOfFirstChildbirth">
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Time Between Giving Birth</mat-label>
+      <input matInput type="number" [(ngModel)]="simulationSettings.timeBetweenBirths" name="timeBetweenBirths">
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Number of Children</mat-label>
+      <input matInput type="number" [(ngModel)]="simulationSettings.numberOfChildren" name="numberOfChildren">
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Average Lifespan</mat-label>
+      <input matInput type="number" [(ngModel)]="simulationSettings.averageLifespan" name="averageLifespan">
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Childhood Mortality Rate</mat-label>
+      <input matInput type="number" [(ngModel)]="simulationSettings.childhoodMortalityRate" name="childhoodMortalityRate">
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Simulation Length</mat-label>
+      <input matInput type="number" [(ngModel)]="simulationSettings.simulationLength" name="simulationLength">
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Simulation Delay</mat-label>
+      <input matInput type="number" [(ngModel)]="simulationSettings.simulationDelay" name="simulationDelay">
+    </mat-form-field>   
+  </form>
+</div>
