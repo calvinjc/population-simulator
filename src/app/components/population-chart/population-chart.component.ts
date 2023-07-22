@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Chart, Colors } from 'chart.js/auto';
+import { Chart } from 'chart.js/auto';
 import { PopulationSimulatorService } from '../../services/population-simulator.service';
 
 @Component({
@@ -14,9 +14,7 @@ export class PopulationChartComponent implements OnInit {
   
   constructor(
     public simulatorService: PopulationSimulatorService,
-  ) {
-    // Chart.register(Colors);
-  }
+  ) {}
 
   ngOnInit() {
     const chartEl = document.getElementById('populationChart')
